@@ -1,3 +1,11 @@
+/*
+ Description: This program creates a struct of soccer players, and can display, sort, swap, and search different values for each soccer player.
+ Author: Omer Ahmer
+ COMSC 165-5065
+ Date: 10/21/22
+ Status: Complete
+ */
+
 #include <iostream>
 #include <fstream>
 using namespace std;
