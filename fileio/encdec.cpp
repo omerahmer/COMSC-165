@@ -19,9 +19,6 @@ void encrypt(string filename);
 // function to decrypt from other file
 void decrypt(string source);
 
-// function to output decrypted contents
-void outputData(string source, string dest);
-
 int main() {
     string source;
     cout << "Enter source filename: ";
