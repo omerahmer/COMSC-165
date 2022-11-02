@@ -150,11 +150,12 @@ void displayAll(fstream &file) {
 }
 
 void Report(fstream &file) {
+    string line;
     string strings[4];
     int totalQ = 0, totalW = 0, totalR = 0;
-    while (getline(file, strings)) {
+    while (getline(file, line)) {
         int q, w, r;
-        stringstream info(strings[0] + " " + strings[1] + " " + strings[3]);
+        stringstream info(strings[0] + " " + strings[1] + " " + strings[2]);
         info >> q >> w >> r;
         totalQ += q;
         totalW += w;

@@ -31,6 +31,7 @@ int main() {
 
     do {
         cout << "1 — input data, 2 — display original data, 3 — sort data, 4 — display sorted data, 5 — search by last name, 6 — exit" << endl;
+        cin >> option;
         switch (option) {
             case 1:
                 cout << "Enter filename: " << endl;
@@ -50,12 +51,12 @@ int main() {
             case 5:
                 int index = playerSearch(players);
         }
-    } while (option != 6);
+    } while (option == 6);
 }
 
 void inputData(string filename, SoccerPlayer players[]) {
     ifstream ifs;
-    ifs.open(filename.data());
+    ifs.open("names.txt");
     if (ifs) {
         for (int i = 0; i < PLAYERS_SIZE; i++) {
             ifs >> players[i].last;
@@ -70,8 +71,8 @@ void inputData(string filename, SoccerPlayer players[]) {
 
 void display(SoccerPlayer players[]) {
     for (int i = 0; i < PLAYERS_SIZE; i++) {
-        cout << players[i].last << " ";
         cout << players[i].first << " ";
+        cout << players[i].last << " ";
         cout << players[i].day << " ";
         cout << players[i].month << " ";
         cout << players[i].year << endl;
